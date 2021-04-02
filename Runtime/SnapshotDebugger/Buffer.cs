@@ -128,7 +128,7 @@ namespace Unity.SnapshotDebugger
                 int size = UnsafeUtility.SizeOf<T>();
                 NativeSlice<byte> bytes = ReadSlice(size);
 
-                val = UnsafeUtilityEx.AsRef<T>((void*)((byte*)bytes.GetUnsafePtr()));
+                val = UnsafeUtility.AsRef<T>((void*)((byte*)bytes.GetUnsafePtr()));
             }
 
             return val;

@@ -47,7 +47,7 @@ namespace Unity.Kinematica
         [DeallocateOnJobCompletion]
         NativeList<Constraint> constraints;
 
-        NativeString64 debugName;
+        FixedString64 debugName;
 
         int chainIndex;
 
@@ -209,7 +209,7 @@ namespace Unity.Kinematica
             }
         }
 
-        internal static QueryTraitExpression Create(ref Binary binary, NativeString64 debugName = default(NativeString64))
+        internal static QueryTraitExpression Create(ref Binary binary, FixedString64 debugName = default(FixedString64))
         {
             var constraints = new NativeList<Constraint>(Allocator.Temp);
 

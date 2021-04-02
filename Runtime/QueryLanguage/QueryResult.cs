@@ -18,7 +18,7 @@ namespace Unity.Kinematica
         /// </summary>
         public NativeList<PoseSequence> sequences;
 
-        public NativeString64 debugName;
+        public FixedString64 debugName;
 
         /// <summary>
         /// Disposes the underlying pose sequence.

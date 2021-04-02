@@ -16,7 +16,7 @@ namespace Unity.Kinematica
 
         public string DebugTitle => trajectory.IsValid ? $"{debugName.ToString()} (pose & trajectory)" : $"Match {debugName.ToString()} (pose only)";
 
-        public NativeString64 DebugName => debugName;
+        public FixedString64 DebugName => debugName;
 
         [Input("Trajectory")]
         public DebugIdentifier trajectory;
@@ -38,7 +38,7 @@ namespace Unity.Kinematica
 
         public bool deviated;
 
-        public NativeString64 debugName;
+        public FixedString64 debugName;
 
         string DebugWindowTitle => trajectoryWeight >= 0.0f ? $"{debugName.ToString()}, trajectory weight:{trajectoryWeight:0.00}" : debugName.ToString();
 

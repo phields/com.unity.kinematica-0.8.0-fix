@@ -21,7 +21,7 @@ namespace Unity.Kinematica
         /// <returns>Reference to the element at the index passed as argument.</returns>
         public static ref T At<T>(this NativeArray<T> nativeArray, int index) where T : struct
         {
-            return ref UnsafeUtilityEx.ArrayElementAsRef<T>(
+            return ref UnsafeUtility.ArrayElementAsRef<T>(
                 NativeArrayUnsafeUtility.GetUnsafePtr(nativeArray), index);
         }
 
@@ -32,7 +32,7 @@ namespace Unity.Kinematica
         /// <returns>Reference to the element at the index passed as argument.</returns>
         public static ref T At<T>(this NativeList<T> nativeList, int index) where T : struct
         {
-            return ref UnsafeUtilityEx.ArrayElementAsRef<T>(
+            return ref UnsafeUtility.ArrayElementAsRef<T>(
                 NativeListUnsafeUtility.GetUnsafePtr(nativeList), index);
         }
 
@@ -43,7 +43,7 @@ namespace Unity.Kinematica
         /// <returns>Reference to the element at the index passed as argument.</returns>
         public static ref T At<T>(this NativeSlice<T> nativeSlice, int index) where T : struct
         {
-            return ref UnsafeUtilityEx.ArrayElementAsRef<T>(
+            return ref UnsafeUtility.ArrayElementAsRef<T>(
                 NativeSliceUnsafeUtility.GetUnsafePtr(nativeSlice), index);
         }
 
