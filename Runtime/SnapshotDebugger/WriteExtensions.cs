@@ -308,10 +308,10 @@ namespace Unity.SnapshotDebugger
             buffer.Write(value.a);
         }
 
-        public static void Write(this Buffer buffer, NativeString64 value)
+        public static void Write(this Buffer buffer, FixedString64 value)
         {
-            buffer.WriteBlittable(value.LengthInBytes);
-            buffer.WriteBlittable(value.buffer);
+            buffer.WriteBlittable(value.Length);
+            buffer.WriteBlittable(value);
         }
 
         /// <summary>
